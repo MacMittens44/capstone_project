@@ -41,6 +41,7 @@ class Enemy(Character):
         self.weakness = item_weakness
     
     def fight(self):
+        print(self.conversation)
         print('What item do you use?')
         combat_item = input('>')
         if combat_item == self.weakness:
@@ -75,7 +76,7 @@ class Friendly(Character):
         if answer == 'Y':
             print('There are two more rooms ahead of you')
             print('For what is small you need Money and for what is undead you need Light')
-            print('Go east')
+            print('Go west')
             print('I cannot give more information')
-        if answer == 'N':
-            print('north or east')
+        else:
+            print('north or west')

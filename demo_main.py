@@ -64,10 +64,13 @@ while True:
     inhabitant = current_room.get_character()
     if inhabitant is dave:
         inhabitant.describe()
+        dave.fight()
     if inhabitant is tory:
         inhabitant.describe()
+        tory.talk()
     if inhabitant is gary:
         inhabitant.describe()
+        gary.fight()
     command = input('>')
     current_room = current_room.move(command)
     if command == 'exit':
